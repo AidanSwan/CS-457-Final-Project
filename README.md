@@ -2,13 +2,28 @@
 
 ## Setup
 
-1. Install Dependencies
+### 1. Install Dependencies
+```bash
+pip install psycopg2-binary pandas streamlit plotly
+```
+### 2. Create Database
+```bash
+createdb steam_explorer
+psql steam_explorer < db/schema.sql
+```
+### 3. Download the dataset
+Download **'steam.csv'** from:
+https://www.kaggle.com/datasets/nikdavis/steam-store-games
 
-2. Create Database
+Place it in the **'etl/'** folder
 
-3. Download the dataset
-
-4. Run the ETL
-
-5. Launch the Dashboard
-
+### 4. Run the ETL
+```bash
+cd etl
+python etl.py --csv steam.csv
+```
+### 5. Launch the Dashboard
+```bash
+cd app
+streamlit run app.py
+```
