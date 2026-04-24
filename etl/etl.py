@@ -12,11 +12,11 @@ import psycopg2
 from psycopg2.extras import execute_values
 
 DB_CONFIG = {
-    "host": "localhost",
+    "host": "/tmp",
     "port": 5432,
     "dbname": "steam_explorer",
     "user": "postgres",
-    "password": "",
+    "password": "postgres",
 }
 
 DEFAULT_CSV = "steam.csv"
